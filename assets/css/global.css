@@ -1,0 +1,52 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.container h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+.icons svg{
+    height: 2rem;
+    width: 2rem;
+}
+
+.itens{
+    display: grid;
+    margin: 2rem 0;
+    grid-template-columns: 1fr 1fr;
+}
+
+.itens li{
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: #51d7b9;
+    border-radius: 15px;
+    height: 8rem;
+    color: white;
+    margin: 0.2rem;
+}
+
+.itens li h3{
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.itens li p{
+    background-color: #5edfc6;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    padding: 2px;
+    
+}
