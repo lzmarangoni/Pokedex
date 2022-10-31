@@ -5,6 +5,18 @@ body{
 .container{
     box-sizing: border-box;
     padding: 1rem;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+
+@media screen and (min-width: 768px){
+    .container{
+        width: 768px;
+        padding: 2rem 3rem;
+    }
+   
+    
 }
 
 .container h3{
@@ -27,8 +39,6 @@ body{
     margin: 2rem 0;
     flex-wrap: wrap;
     justify-content: center;
-    
-    
 }
 
 .itens li{
