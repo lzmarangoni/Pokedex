@@ -23,9 +23,12 @@ body{
 }
 
 .itens{
-    display: grid;
+    display: flex;
     margin: 2rem 0;
-    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
 }
 
 .itens li{
@@ -36,17 +39,36 @@ body{
     height: 8rem;
     color: white;
     margin: 0.2rem;
+    display: flex;
+    text-align: center;
+    width: 10rem;    
 }
 
 .itens li h3{
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin: 1rem 0;
 }
 
 .itens li p{
     background-color: #5edfc6;
-    border-radius: 5px;
+    border-radius:20px;
     margin: 0.5rem 0;
-    padding: 2px;
-    
+    font-size: .9rem;
+    box-sizing: border-box;
+    padding: ;
+}
+
+.itens li img{
+    width: 50%;
+    margin: 2rem 0 0 0 ;
+}
+
+.info{
+    width: 50%;
+}
+
+@media screen and(min-width: 768px)  {
+    .itens{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
