@@ -1,36 +1,41 @@
-const url ='https://pokeapi.co/api/v2/pokemon'
-
 function convertPokemonToLi(pokemon){
     return`
-        <li>
-            <div class="info">
+        <li class="pokemon">
+            <div class="nameHeader">
                 <h3>${pokemon.name}</h3>
-                <p>Grass</p>
-                <p>Poison</p>
+                <h4>#001</h4>
             </div>
+            <div class="info">
+                <ol>
+                    <p>grass</p>
+                    <p>Poison</p>
+                </ol>
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="${pokemon.name}">
-        </li>
+            </div>
+            </li>
     `
 }
 
 const pokemonList = document.querySelector('.itens')
 
+pokeApi.getPokemons().then((pokemons = [])=> {
+        const newHtml = pokemons.map(convertPokemonToLi).join("")
+        pokemonList.innerHTML = newHtml
+    }
+    
+)
 
 
-
-
-
-fetch(url)
-    .then((response)=> 
-     response.json()
-    )
-    .then((jsonBody)=> {
-        const pokemons = jsonBody.results
-        for(let i = 0; i < pokemons.length; i++ ){
-            const pokemon = pokemons[i]
-            pokemonList.innerHTML += convertPokemonToLi(pokemon)
-        }
-        
-    })
-
-
+/*<li>
+            <div class="info">
+                <h3>${pokemon.name}</h3>
+                
+                <ol>
+                    <p>grass</p>
+                    <p>Poison</p>
+                </ol>
+                
+            </div>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="${pokemon.name}">
+        </li>
+        */

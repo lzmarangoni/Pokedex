@@ -7,7 +7,7 @@ body{
     padding: 1rem;
     margin: 0 auto;
     background-color: #f0f0f0;
-    height: 100vh;
+    height: 100%;
 }
 
 @media screen and (min-width: 768px){
@@ -49,14 +49,13 @@ body{
     height: 8rem;
     color: white;
     margin: 0.2rem;
-    display: flex;
     text-align: center;
     width: 10rem;    
 }
 
 .itens li h3{
     font-size: 1.3rem;
-    margin: 1rem 0;
+    margin: .25rem 0;
 }
 
 .itens li p{
@@ -65,20 +64,31 @@ body{
     margin: 0.5rem 0;
     font-size: .9rem;
     box-sizing: border-box;
-    padding: ;
+    
 }
-
+.itens li ol{
+    width: 50%;
+}
 .itens li img{
     width: 50%;
-    margin: 2rem 0 0 0 ;
+}
+
+.nameHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: .25rem 0;
+}
+
+.nameHeader h4{
+    position: absolute;
+    right: 0;
+    opacity: 40%;
 }
 
 .info{
-    width: 50%;
+    display: flex;
+    padding: 0.75rem 0;
 }
 
-@media screen and(min-width: 768px)  {
-    .itens{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
