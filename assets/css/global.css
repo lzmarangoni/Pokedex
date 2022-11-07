@@ -121,3 +121,16 @@ body{
 .dark{background-color: #705746;} 
 .steel{background-color: #B7B7CE;} 
 .fairy{background-color: #D685AD;} 
+
+.buttonLoad{
+    display: flex;
+    margin: 1rem 0;
+}
+.buttonLoad button{
+    background-color: #6c79d9;
+    color: white;
+    margin: 0 auto;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.25rem 0.5rem;
+}

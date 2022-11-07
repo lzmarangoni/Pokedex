@@ -1,5 +1,14 @@
-function convertPokemonToLi(pokemon){
-    return`
+const pokemonList = document.querySelector('.itens')
+const buttonLoad = document.getElementById('buttonLoad')
+const limit = 4;
+let offset = 0; 
+
+
+
+function loadPokemonItens(offset, limit){
+ 
+    pokeApi.getPokemons(offset, limit).then((pokemons = [])=> {
+        const newHtml = pokemons.map((pokemon) => `
         <li class="pokemon ${pokemon.type}">
             <div class="nameHeader">
                 <h3>${pokemon.name}</h3>
@@ -11,15 +20,19 @@ function convertPokemonToLi(pokemon){
                 </ol>
             <img src=${pokemon.photo} alt="${pokemon.name}">
             </div>
-            </li>
-    `
-}
-
-const pokemonList = document.querySelector('.itens')
-
-pokeApi.getPokemons().then((pokemons = [])=> {
-        const newHtml = pokemons.map(convertPokemonToLi).join("")
-        pokemonList.innerHTML = newHtml
+        </li>
+        `
+        
+        
+        ).join("")
+        pokemonList.innerHTML += newHtml
     }
     
 )
+}
+
+loadPokemonItens(offset, limit)
+
+buttonLoad.addEventListener('click',()=>{
+    offset += limit
+    loadPokemonItens(offset, limit)})
